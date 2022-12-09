@@ -1,6 +1,6 @@
 package com.github.zipcodewilmington;
 
-public class KVdata implements Comparable {
+public class KVdata<T extends Comparable<T>> implements Comparable<KVdata<T>> {
     private String k;
     private Integer v;
 
@@ -31,7 +31,8 @@ public class KVdata implements Comparable {
     }
 
     @Override
-    public int compareTo(Object o) {
-        return 0;
+    public int compareTo(KVdata<T> o) {
+        if (this.k.equals(o.getKey())) return 0;
+        else return -1;
     }
 }

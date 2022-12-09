@@ -56,7 +56,7 @@ public class SLL<T extends Comparable<T>> {
         Node<T> temp = this.head;
         int count = 0;
         while (temp != null) {
-            if (temp.getData().equals(data)) {
+            if (data.compareTo(temp.getData()) == 0) {
                 return count;
             }
             count += 1;

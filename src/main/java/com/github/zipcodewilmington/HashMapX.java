@@ -7,12 +7,12 @@ package com.github.zipcodewilmington;
  */
 public interface HashMapX {
     // fundamentals
-    void set(String key, String value);
-    String delete(String key);
-    String get(String key);
+    void set(Object key, Object value);
+    Object delete(Object key);
+    Object get(Object key);
     boolean isEmpty();
     long size();
 
     // testing access
-    boolean bucketSize(String key); // used for tests
+    boolean bucketSize(Object key); // used for tests
 }
